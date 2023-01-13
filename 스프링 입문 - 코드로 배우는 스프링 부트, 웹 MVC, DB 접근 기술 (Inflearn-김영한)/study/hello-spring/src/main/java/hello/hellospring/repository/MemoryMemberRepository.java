@@ -1,8 +1,10 @@
 package hello.hellospring.repository;
 
 import hello.hellospring.domain.Member;
+import org.springframework.stereotype.Repository;
 
 import java.util.*;
+
 
 public class MemoryMemberRepository implements MemberRepository {
 
@@ -10,7 +12,7 @@ public class MemoryMemberRepository implements MemberRepository {
     private static Map<Long, Member> store = new HashMap<>();
     private static long sequence = 0L;
 
-    @Override
+
     public Member save(Member member) {
         member.setId(++sequence);  // name은 클라이언트에서 받아오고, Id는 여기서 만든다.
         store.put(member.getId(), member);
