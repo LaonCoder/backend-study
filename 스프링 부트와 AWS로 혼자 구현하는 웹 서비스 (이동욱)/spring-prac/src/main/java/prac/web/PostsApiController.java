@@ -1,5 +1,6 @@
 package prac.web;
 
+import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import prac.service.PostsService;
@@ -7,6 +8,7 @@ import prac.web.dto.PostsResponseDto;
 import prac.web.dto.PostsSaveRequestDto;
 import prac.web.dto.PostsUpdateRequestDto;
 
+@Getter
 @RequiredArgsConstructor
 @RestController
 public class PostsApiController {
